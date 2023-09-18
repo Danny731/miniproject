@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import './App.css';
-
+//import './App.html';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore'; 
@@ -21,14 +21,16 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-
-
+//let myImage = document.getElementById("Logo");
+//myImage.setAttribute("src", "Pic1.jpg")
 function App() {
   const [user] = useAuthState(auth);
   return (
+    //document.getElementById("Logo").setAttribute("src", "Pic1.jpg");
     <div className="App">
       <header>
-        
+      <h1 style={{color: 'azure'}}> Welcome to the AllChat</h1>
+      <h7 style={{color: 'azure'}}> Interative chat with multiple users</h7>
       </header>
       <section>
         {user ? <ChatRoom /> : <SignIn />}
@@ -38,7 +40,6 @@ function App() {
 }
 
 function SignIn() {
-
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
