@@ -15,7 +15,7 @@ The security was implemented in the back end. All of the security was implemente
 
 Lastly, the design decision puts emphasis on REST API and agile SW development. The app is flexible, secure, and scales with the cloud in firebase. The team ultimately decided on a web application because it is very easily compatible with React and Firebase.
 
-The video link demo: [https://drive.google.com/file/d1ncWI1fA2kO1-AarRgJ6jjecir8humqHV/view?usp=sharing](https://drive.google.com/file/d/1ncWI1fA2kO1-AarRgJ6jjecir8humqHV/view?usp=sharing)https://drive.google.com/file/d/1ncWI1fA2kO1-AarRgJ6jjecir8humqHV/view?usp=sharing
+The video link demo: https://drive.google.com/file/d/1ncWI1fA2kO1-AarRgJ6jjecir8humqHV/view?usp=sharing
 
 REST APIs are in Github Wiki.
 
