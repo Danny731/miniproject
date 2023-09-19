@@ -13,10 +13,12 @@ For the design of the App, it is relatively straightforward. If a user is signed
 
 The security was implemented in the back end. All of the security was implemented in Cloud Firestore using js. It's implemented by first matching the path to the firebase database, then we check user credentials such as login information and making sure the user that is sending the message is the same as the user logged in. For security design, we also tried to implement a ban system and word collectors for profanities, but those are still in the development phase.
 
-Lastly, the design decision puts emphasis on REST API and agile SW development. The app is flexible, secure, and scales with the cloud in firebase. The team ultimately decided on a web application because it is very easily compatible with React and Firebase.
+Lastly, the design decision puts emphasis on REST API and agile SW development. The app is flexible, secure, and scales with the cloud in firebase. The team ultimately decided on a web application because it is very easily compatible with React and Firebase. One last important thing to mention about design is the UI and style. The style we were aiming for was casual and simple, thus, the color combination is white and different shades of blue. The text is white for readability and we outline most of the clickable buttons in darker colors. Overall, the design of the app gives a smooth and simple feel. The UI is done similarly.
 
 The video link demo: https://drive.google.com/file/d/1ncWI1fA2kO1-AarRgJ6jjecir8humqHV/view?usp=sharing
 
 REST APIs are in Github Wiki.
 
 Testing and results are under issues.
+
+A few functionalities like scrollbar and navigation bars didn't make it into the final stage.
