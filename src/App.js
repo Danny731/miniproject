@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import {useRef} from 'react';
 import './App.css';
 //import './App.html';
 import firebase from 'firebase/compat/app';
@@ -29,9 +30,12 @@ function App() {
     //document.getElementById("Logo").setAttribute("src", "Pic1.jpg");
     <div className="App">
       <header>
+
       <h1 style={{color: 'azure'}}> Welcome to the AllChat</h1>
       <h7 style={{color: 'azure'}}> Interative chat with multiple users</h7>
       <h1 class = "logo">🕊️</h1>
+      <SignOut />
+
       </header>
       <section>
         {user ? <ChatRoom /> : <SignIn />}
@@ -58,6 +62,7 @@ function SignOut() {
 }
 
 function ChatRoom() {
+  const slide = useRef();
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
 
@@ -78,12 +83,14 @@ function ChatRoom() {
     })
 
     setFormValue('');
+    slide.current.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
     <>
       <div>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+        <div ref = {slide}></div>
       </div>
       <button onClick={() => auth.signOut()} class = "SignOut">Sign Out</button>
       <form onSubmit={sendMessage}>
