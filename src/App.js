@@ -34,7 +34,6 @@ function App() {
       <h1 style={{color: 'azure'}}> Welcome to the AllChat</h1>
       <h7 style={{color: 'azure'}}> Interative chat with multiple users</h7>
       <h1 class = "logo">🕊️</h1>
-      <SignOut />
 
       </header>
       <section>
