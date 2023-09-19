@@ -31,6 +31,7 @@ function App() {
       <header>
       <h1 style={{color: 'azure'}}> Welcome to the AllChat</h1>
       <h7 style={{color: 'azure'}}> Interative chat with multiple users</h7>
+      <h1 class = "logo">🕊️</h1>
       </header>
       <section>
         {user ? <ChatRoom /> : <SignIn />}
@@ -46,13 +47,12 @@ function SignIn() {
   }
 
   return (
-      <button onClick={signInWithGoogle}>Sign in with Google</button>
+      <button onClick={signInWithGoogle} class = "SignIn">Sign in with Google</button>
   )
 }
 
 function SignOut() {
   return auth.currentUser && (
-
     <button onClick={() => auth.signOut()}>Sign Out</button>
   )
 }
@@ -85,10 +85,11 @@ function ChatRoom() {
       <div>
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
       </div>
-
+      <button onClick={() => auth.signOut()} class = "SignOut">Sign Out</button>
       <form onSubmit={sendMessage}>
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)}/>
-      <button type="submit">🕊️</button>
+      <button type="submit">Send</button>
+      <p class = "SideChat">ChatRoom</p>
 
     </form>
     
@@ -108,6 +109,7 @@ function ChatMessage(props) {
     </div>
   </>)
 }
+
 
 
 
